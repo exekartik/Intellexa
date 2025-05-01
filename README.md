@@ -121,35 +121,16 @@ We welcome all contributions! Here's how to get started:
    ```
 5. **Create a Pull Request** – Clearly describe your updates or fixes.
 
----
-
-## 📜 License
-
-Licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
 
 ## 🙏 Acknowledgments
 
 - 👨‍🏫 **Special thanks to [GreatStack](https://www.youtube.com/@GreatStack)** for the original tutorial and inspiration.
 - 💡 Thanks to **Google** for their free Gemini APIs.
 - 🌐 Grateful to **Vercel** for free hosting support.
-- ❤️ And a big thank you to the **open source community** for ongoing encouragement and resources.
-
+- ❤️ And a big thank you to the **open source community** for ongoing encouragement and resources
 ---
 
-## 🔗 About the Author
 
-**Ranit Manik**  
-📬 [Patreon](https://patreon.com/ranitmanik)  
-☕ [Buy Me a Coffee](https://buymeacoffee.com/ranitmanik)
-
----
-
-Happy Coding! 🚀  
-Let the power of Gemini enhance your web experiences!
-
----
 
 Would you like a **logo suggestion** or **badge additions** for the top of your README as well?
 <p align="center">Thank you for exploring the <strong>Google Gemini Clone</strong>! Happy coding! 🚀</p> ```git add README.md
