@@ -60,68 +60,63 @@ Gemini Clone is a web application built using React that emulates the Google Gem
 
    ```bash
    git clone https://github.com/RanitManik/Gemini-Clone.git
-   ```
 
-2. Navigate to the project directory:
+Navigate to the project directory:
 
-   ```bash
-   cd Gemini-Clone
-   ```
+bash
+Copy
+Edit
+cd Gemini-Clone
+Install dependencies:
 
-3. Install dependencies:
+bash
+Copy
+Edit
+npm install
+Create a .env.local file in the root of the project and add your Google Gemini API key:
 
-   ```bash
-   npm install
-   ```
+plaintext
+Copy
+Edit
+GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
+Start the development server:
 
-4. Create a `.env.local` file in the root of the project and add your Google Gemini API key:
+bash
+Copy
+Edit
+vite
+Usage
+After installation, open your browser and navigate to http://localhost:5173/ to access the Gemini Clone application. You can start interacting with the Gemini model through the chat interface provided.
 
-   ```plaintext
-   GEMINI_API_KEY="YOUR_GEMINI_API_KEY"
-   ```
-
-5. Start the development server:
-
-   ```bash
-   vite
-   ```
-
-## Usage
-
-After installation, open your browser and navigate to `http://localhost:5173/` to access the Gemini Clone application. You can start interacting with the Gemini model through the chat interface provided.
-
-## Contributing
-
+Contributing
 We welcome contributions to enhance the Gemini Clone project. To contribute:
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix:
+Fork the repository.
 
-   ```bash
-   git checkout -b feature-name
-   ```
+Create a new branch for your feature or bug fix:
 
-3. Make your changes and commit them with clear and descriptive messages.
-4. Push your changes to your fork:
+bash
+Copy
+Edit
+git checkout -b feature-name
+Make your changes and commit them with clear and descriptive messages.
 
-   ```bash
-   git push origin feature-name
-   ```
+Push your changes to your fork:
 
-5. Create a pull request to the main repository, detailing the changes and enhancements you have made.
+bash
+Copy
+Edit
+git push origin feature-name
+Create a pull request to the main repository, detailing the changes and enhancements you have made.
 
-## License
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Acknowledgment
+Special thanks to GreatStack for his Gemini Clone tutorial that served as a valuable reference for this project.
 
-## Acknowledgment
-
-Special thanks to **[GreatStack](https://www.youtube.com/@GreatStackDev)** for his [Gemini Clone tutorial](https://youtu.be/0yboGn8errU?feature=shared) that served as a valuable reference for this project.
-
-It's also essential to acknowledge **Google** for providing their free Gemini APIs and **vercel** for providing their free-of-cost hosting plans, which greatly contributed to the success of this project. Their support has been invaluable.
+It's also essential to acknowledge Google for providing their free Gemini APIs and vercel for providing their free-of-cost hosting plans, which greatly contributed to the success of this project. Their support has been invaluable.
 
 Lastly, I want to thank the open source community for all their support.
 
----
-
-<p align="center">Thank you for exploring the <strong>Google Gemini Clone</strong>! Happy coding! 🚀</p>
+<p align="center">Thank you for exploring the <strong>Google Gemini Clone</strong>! Happy coding! 🚀</p> ```git add README.md
