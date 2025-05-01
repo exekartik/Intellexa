@@ -1,0 +1,279 @@
+:root {
+    --sidebar-bg: #1e1e1e;
+    --sidebar-hover: rgba(60, 60, 60, 0.7);
+    --sidebar-active: rgba(80, 80, 80, 0.7);
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent-color: #4b90ff;
+    --transition-fast: all 0.2s ease;
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .sidebar {
+    min-height: 100svh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--sidebar-bg);
+    padding: 30px 20px;
+    transition: width 0.3s ease, padding 0.3s ease;
+    z-index: 999;
+    user-select: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 800px) {
+    .sidebar {
+      position: fixed;
+      box-shadow: 5px 0 25px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  .sidebar.extended {
+    width: 280px;
+  }
+  
+  .sidebar.collapsed {
+    width: 90px;
+  }
+  
+  .sidebar img {
+    width: 22px;
+    transition: var(--transition-fast);
+    filter: brightness(0.9);
+  }
+  
+  .menu {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: var(--transition-smooth);
+    margin-bottom: 20px;
+  }
+  
+  .menu:hover {
+    background-color: var(--sidebar-hover);
+    transform: rotate(90deg);
+  }
+  
+  .menu:active {
+    background-color: var(--sidebar-active);
+    transform: rotate(180deg);
+  }
+  
+  .top, .bottom {
+    display: grid;
+    gap: 0.75rem;
+    align-content: start;
+    align-items: center;
+  }
+  
+  .sidebar .new-chat {
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: rgba(60, 60, 60, 0.5);
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .new-chat:hover {
+    background: rgba(80, 80, 80, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .new-chat:active {
+    transform: translateY(0);
+  }
+  
+  .new-chat img {
+    transition: var(--transition-fast);
+  }
+  
+  .new-chat:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  
+  .sidebar .recent-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: var(--transition-fast);
+  }
+  
+  .sidebar .recent-entry {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .sidebar .recent-entry::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent-color);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar .recent-entry:hover {
+    background-color: var(--sidebar-hover);
+    padding-left: 18px;
+  }
+  
+  .sidebar .recent-entry:hover::before {
+    transform: scaleY(1);
+  }
+  
+  .sidebar .recent-entry:active {
+    background-color: var(--sidebar-active);
+  }
+  
+  .recent-entry-p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: var(--transition-fast);
+  }
+  
+  .sidebar .recent-entry:hover .recent-entry-p {
+    transform: translateX(3px);
+  }
+  
+  .fade {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .recent {
+    max-height: 300px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+  }
+  
+  .recent::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .recent::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+  }
+  
+  .recent::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Animation Classes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+  }
+  
+  .none {
+    display: none;
+    opacity: 0;
+    animation: fadeOut 0.3s forwards;
+  }
+  
+  .block {
+    display: block;
+    opacity: 0;
+    animation: fadeIn 0.3s 0.1s forwards;
+    white-space: nowrap;
+  }
+  
+  /* Collapsed State Enhancements */
+  .sidebar.collapsed .new-chat {
+    justify-content: center;
+    width: 50px;
+    padding: 12px;
+  }
+  
+  .sidebar.collapsed .new-chat span {
+    display: none;
+  }
+  
+  .sidebar.collapsed .recent-title {
+    text-align: center;
+  }
+  
+  .sidebar.collapsed .recent-entry {
+    justify-content: center;
+    padding: 12px;
+  }
+  
+  .sidebar.collapsed .recent-entry-p {
+    display: none;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .sidebar.extended {
+      width: 240px;
+    }
+    
+    .sidebar.collapsed {
+      width: 70px;
+    }
+    
+    .sidebar {
+      padding: 20px 15px;
+    }
+  }
